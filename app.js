@@ -34,24 +34,19 @@ db.once('open', function callback () {
 
 app.post('/cryptovalue',function(req, res) {
   var val1=req.body.queryResult.parameters['cryptocoin'];
-  var url="https://api.cryptonator.com/api/ticker/";
-// const rp = require('request-promise');
-// const requestOptions = {
-//   method: 'GET',
-//   uri:url+val1+'/usd';
-//  };
+  var url="https://api.cryptonator.com/api/ticker/"+val1+"/usd";
+const rp = require('request-promise');
+const requestOptions = {
+  method: 'GET',
+  uri:url;
+ };
 
-// rp(requestOptions).then(response => {
+rp(requestOptions).then(response => {
   var data=JSON.parse(response)
-  var value={
-    "fullfllmentText":req.body,
-    "fullfllmentMessages":[{"text":{"text":req.body}}],
-    "source":""
-  }
-return res.json(value)
-// }).catch((err) => {
-//   console.log('API call error:', err.message);
-// });
+res.json({ 'fulfillmentText': data.ticker.price })
+}).catch((err) => {
+  console.log('API call error:', err.message);
+});
 
 
 })
