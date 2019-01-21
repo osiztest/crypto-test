@@ -1,0 +1,28 @@
+{
+  "name": "helpdesk",
+  "version": "1.0.0",
+  "description": "NodeJS Application for IT help desk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pavan",
+  "license": "ISC",
+  "dependencies": {
+    "apiai": "^4.0.3",
+    "bad-words": "^3.0.0",
+    "check-word": "^1.1.0",
+    "csvtojson": "^2.0.8",
+    "dialogflow": "^0.7.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "google": "^2.1.0",
+    "node-nlp": "^2.3.1",
+    "simple-spellchecker": "^0.9.7",
+    "socket.io": "^2.0.4",
+    "split-string": "^6.0.0",
+    "split-to-words": "^1.0.2",
+    "uuid": "^3.1.0",
+    "wordlist-english": "^1.2.1"
+  }
+}
