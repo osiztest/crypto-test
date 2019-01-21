@@ -34,7 +34,7 @@ db.once('open', function callback () {
 
 app.post('/cryptovalue',function(req, res) {
 
-console.log(req)
+console.log("sdgs")
 
 
 })
