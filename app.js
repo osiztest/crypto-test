@@ -38,7 +38,7 @@ app.post('/cryptovalue',function(req, res) {
 const rp = require('request-promise');
 const requestOptions = {
   method: 'GET',
-  uri:url+'/'+val1+'/usd';
+  uri:url+val1+'/usd';
  };
 
 rp(requestOptions).then(response => {
